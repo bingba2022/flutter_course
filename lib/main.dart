@@ -21,7 +21,7 @@ class App extends StatelessWidget {
             children: [
               const SizedBox(
                 // HeyLucy - Total Balance
-                height: 60,
+                height: 50,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -50,7 +50,7 @@ class App extends StatelessWidget {
               ),
               const SizedBox(
                 // Total Balance - Transfer
-                height: 60,
+                height: 40,
               ),
               Text(
                 "Total Balance",
@@ -70,7 +70,7 @@ class App extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
-              const SizedBox(height: 30),
+              const SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
@@ -87,7 +87,7 @@ class App extends StatelessWidget {
                 ],
               ),
               const SizedBox(
-                height: 100,
+                height: 60,
               ),
               Row(
                 crossAxisAlignment: CrossAxisAlignment.end,
@@ -114,24 +114,64 @@ class App extends StatelessWidget {
                 height: 20,
               ),
               Container(
-                decoration: const BoxDecoration(
-                  color: Color.fromARGB(255, 43, 45, 48),
+                clipBehavior: Clip.hardEdge,
+                decoration: BoxDecoration(
+                  color: const Color.fromARGB(255, 43, 45, 48),
+                  borderRadius: BorderRadius.circular(25),
                 ),
-                child: Row(
-                  children: [
-                    Column(
-                      children: [
-                        const Text('Euro'),
-                        const SizedBox(height: 10),
-                        Row(
-                          children: const [
-                            Text('6 428'),
-                            Text('EUR'),
-                          ],
+                child: Padding(
+                  padding: const EdgeInsets.all(20),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            'Euro',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 30,
+                              fontWeight: FontWeight.w600,
+                            ),
+                          ),
+                          const SizedBox(height: 11),
+                          Row(
+                            children: [
+                              const Text(
+                                '6 428',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                ),
+                              ),
+                              const SizedBox(
+                                width: 5,
+                              ),
+                              Text(
+                                'EUR',
+                                style: TextStyle(
+                                  color: Colors.white.withOpacity(0.8),
+                                  fontSize: 18,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      Transform.scale(
+                        scale: 2.2,
+                        child: Transform.translate(
+                          offset: const Offset(-5, 7),
+                          child: const Icon(
+                            Icons.euro_rounded,
+                            color: Colors.white,
+                            size: 88,
+                          ),
                         ),
-                      ],
-                    ),
-                  ],
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],
