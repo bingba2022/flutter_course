@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:toonflix/widgets/button.dart';
 
 void main() {
   runApp(App());
@@ -72,45 +73,17 @@ class App extends StatelessWidget {
               const SizedBox(height: 30),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
+                children: const [
                   // Transfer Button
-                  Container(
-                    decoration: BoxDecoration(
-                        color: const Color(0xFFF2B33A),
-                        borderRadius: BorderRadius.circular(45)),
-                    child: const Padding(
-                      padding: EdgeInsets.symmetric(
-                        vertical: 20,
-                        horizontal: 55,
-                      ),
-                      child: Text(
-                        "Transer",
-                        style: TextStyle(
-                          fontSize: 20,
-                        ),
-                      ),
-                    ),
-                  ),
-
+                  Button(
+                      text: 'Transfer',
+                      bgColor: Color(0xFFF1B33B),
+                      textColor: Colors.black),
                   // Request Button
-                  Container(
-                    decoration: BoxDecoration(
-                        color: const Color.fromARGB(255, 43, 45, 48),
-                        borderRadius: BorderRadius.circular(45)),
-                    child: const Padding(
-                      padding: EdgeInsets.symmetric(
-                        vertical: 20,
-                        horizontal: 55,
-                      ),
-                      child: Text(
-                        "Request",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 20,
-                        ),
-                      ),
-                    ),
-                  ),
+                  Button(
+                      text: 'Request',
+                      bgColor: Color.fromARGB(255, 43, 45, 48),
+                      textColor: Colors.white),
                 ],
               )
             ],
