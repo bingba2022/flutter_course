@@ -85,7 +85,55 @@ class App extends StatelessWidget {
                       bgColor: Color.fromARGB(255, 43, 45, 48),
                       textColor: Colors.white),
                 ],
-              )
+              ),
+              const SizedBox(
+                height: 100,
+              ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text(
+                    'Wallets',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 36,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                  Text(
+                    'View All',
+                    style: TextStyle(
+                      color: Colors.white.withOpacity(0.8),
+                      fontSize: 18,
+                    ),
+                  ),
+                ],
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Container(
+                decoration: const BoxDecoration(
+                  color: Color.fromARGB(255, 43, 45, 48),
+                ),
+                child: Row(
+                  children: [
+                    Column(
+                      children: [
+                        const Text('Euro'),
+                        const SizedBox(height: 10),
+                        Row(
+                          children: const [
+                            Text('6 428'),
+                            Text('EUR'),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
