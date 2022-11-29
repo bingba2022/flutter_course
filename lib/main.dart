@@ -12,13 +12,13 @@ class App extends StatelessWidget {
     // CupertinoApp : ios
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Color(0xFF181818),
+        backgroundColor: const Color(0xFF181818),
         body: Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(
+              const SizedBox(
                 // HeyLucy - Total Balance
                 height: 60,
               ),
@@ -28,7 +28,7 @@ class App extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      Text(
+                      const Text(
                         "Hey, Lucy",
                         style: TextStyle(
                           color: Colors.white,
@@ -47,7 +47,7 @@ class App extends StatelessWidget {
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 // Total Balance - Transfer
                 height: 60,
               ),
@@ -58,10 +58,10 @@ class App extends StatelessWidget {
                   color: Colors.white.withOpacity(0.8),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
-              Text(
+              const Text(
                 "\$5 194 482",
                 style: TextStyle(
                   fontSize: 44,
@@ -69,17 +69,19 @@ class App extends StatelessWidget {
                   color: Colors.white,
                 ),
               ),
-              SizedBox(height: 30),
+              const SizedBox(height: 30),
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
+                  // Transfer Button
                   Container(
                     decoration: BoxDecoration(
-                        color: Colors.amber,
+                        color: const Color(0xFFF2B33A),
                         borderRadius: BorderRadius.circular(45)),
-                    child: Padding(
+                    child: const Padding(
                       padding: EdgeInsets.symmetric(
                         vertical: 20,
-                        horizontal: 50,
+                        horizontal: 55,
                       ),
                       child: Text(
                         "Transer",
@@ -88,7 +90,27 @@ class App extends StatelessWidget {
                         ),
                       ),
                     ),
-                  )
+                  ),
+
+                  // Request Button
+                  Container(
+                    decoration: BoxDecoration(
+                        color: const Color.fromARGB(255, 43, 45, 48),
+                        borderRadius: BorderRadius.circular(45)),
+                    child: const Padding(
+                      padding: EdgeInsets.symmetric(
+                        vertical: 20,
+                        horizontal: 55,
+                      ),
+                      child: Text(
+                        "Request",
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
               )
             ],
